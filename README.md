@@ -1,4 +1,4 @@
-# Northstar Flight Simulator
+# Datta Flight Simulator
 
 A polished, self-contained browser flight experience built with plain HTML, CSS, and Canvas. It has no dependencies, no build step, and works offline once downloaded.
 
