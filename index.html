@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#07111a">
   <meta name="description" content="Datta Flight Simulator — a cinematic, dependency-free browser flight experience.">
   <title>Datta Flight Simulator</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=airliner-4">
 </head>
 <body>
-  <main id="sim" aria-label="Datta Flight Simulator">
+  <main id="sim" aria-label="Datta Flight Simulator" data-brand-version="airliner-4">
     <canvas id="world" aria-label="Forward view from the aircraft cockpit"></canvas>
     <div class="vignette"></div>
 
@@ -26,11 +26,18 @@
     </header>
 
     <section class="mission-card" aria-label="Flight objective">
-      <p class="eyebrow">TRAINING FLIGHT · 01</p>
-      <h1 id="missionTitle">CLEAR FOR TAKEOFF</h1>
-      <p id="missionText">Advance throttle, hold centerline, then ease the nose up above 90 kt.</p>
+      <p class="eyebrow" id="flightNumber">DATTA AIR · PASSENGER SERVICE</p>
+      <h1 id="missionTitle">SFO DEPARTURE</h1>
+      <p id="missionText">Runway 28R. Advance thrust, hold centerline, and rotate at 132 kt.</p>
       <div class="progress"><span id="missionProgress"></span></div>
       <p id="hint" class="hint"><kbd>W</kbd> throttle up &nbsp; <kbd>↑</kbd> pitch up</p>
+    </section>
+
+    <section class="route-card" aria-label="Flight route">
+      <div class="airport"><b id="originCode">KSFO</b><span id="originCity">SAN FRANCISCO</span></div>
+      <div class="route-line"><i class="route-progress" id="routeProgress"></i><em class="plane-icon" id="planeIcon">▲</em><span class="waypoint wp1" id="wp1">PORTE</span><span class="waypoint wp2" id="wp2">MENLO</span><span class="waypoint wp3" id="wp3">SNS</span></div>
+      <div class="airport end"><b id="destCode">KMRY</b><span id="destCity">MONTEREY</span></div>
+      <p><span id="routePhase">GATE → RUNWAY 28R</span><span id="distanceRemaining">74 NM REMAINING</span></p>
     </section>
 
     <div class="reticle" aria-hidden="true"><span></span><i></i><span></span></div>
@@ -42,6 +49,10 @@
       <div class="instrument compass"><span>HEADING</span><strong id="heading">000°</strong><small id="direction">N</small></div>
       <div class="instrument"><span>VERT SPEED</span><strong id="vspeed">+000</strong><small>FT/MIN</small><div class="meter split"><i id="vsiBar"></i></div></div>
       <div class="instrument throttle-readout"><span>THROTTLE</span><strong id="throttle">00</strong><small>%</small><div class="meter"><i id="throttleBar"></i></div></div>
+    </section>
+
+    <section class="systems" aria-label="Airliner systems">
+      <div><span>N1</span><b id="n1">22.0</b><small>%</small></div><div><span>FLAPS</span><b id="flaps">5</b><small>DEG</small></div><div><span>GEAR</span><b id="gear">DOWN</b><small id="gearLight">●</small></div><div><span>FUEL</span><b id="fuel">8.4</b><small>T</small></div>
     </section>
 
     <aside class="controls-card" aria-label="Controls help">
