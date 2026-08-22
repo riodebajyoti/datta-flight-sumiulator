@@ -6,11 +6,12 @@
   <meta name="theme-color" content="#07111a">
   <meta name="description" content="Datta Flight Simulator — a cinematic, dependency-free browser flight experience.">
   <title>Datta Flight Simulator</title>
-  <link rel="stylesheet" href="styles.css?v=motion-fix-11">
+  <link rel="stylesheet" href="styles.css?v=webgl-flight-12">
 </head>
 <body>
-  <main id="sim" aria-label="Datta Flight Simulator" data-brand-version="motion-fix-11">
-    <canvas id="world" aria-label="Forward view from the aircraft cockpit"></canvas>
+  <main id="sim" aria-label="Datta Flight Simulator" data-brand-version="webgl-flight-12">
+    <canvas id="world3d" aria-label="Real-time three-dimensional forward view from the aircraft cockpit"></canvas>
+    <canvas id="world" aria-hidden="true"></canvas>
     <div class="vignette"></div>
     <div class="windshield-glass" aria-hidden="true"></div>
     <img class="cockpit-photo" src="cockpit-panel.jpg" alt="" aria-hidden="true">
@@ -76,6 +77,6 @@
     <footer><span id="coordinates">N 37° 37.1′ · W 122° 22.5′</span><span>REAL-TIME FLIGHT MODEL · <b id="fps">60 FPS</b></span></footer>
     <div id="pauseOverlay" class="pause-overlay"><p>SIMULATION PAUSED</p><button id="resumeBtn">RESUME FLIGHT</button></div>
   </main>
-  <script src="simulator.js?v=motion-fix-11"></script>
+  <script src="simulator.js?v=webgl-flight-12"></script>
 </body>
 </html>
