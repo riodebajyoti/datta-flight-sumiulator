@@ -1,6 +1,6 @@
 # Datta Flight Simulator
 
-A polished, self-contained passenger-airliner experience built with plain HTML, CSS, and Canvas. Every new flight selects a varied domestic or international route with realistic airports, runways, waypoints, flight phases, cockpit systems, and compressed playable distance. It has no dependencies, no build step, and works offline once downloaded.
+A polished, self-contained passenger-airliner experience built with plain HTML, CSS, Canvas, and one original locally hosted cockpit texture. Every new flight selects a varied domestic or international route with realistic airports, runways, waypoints, flight phases, cockpit systems, and compressed playable distance. It has no dependencies, no build step, and works offline once downloaded.
 
 ## Fly
 
